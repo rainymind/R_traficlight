@@ -1,0 +1,25 @@
+% Define the traffic light states
+red = 1;
+yellow = 2;
+green = 3;
+
+% Initialize the traffic light state
+state = red;
+
+while true
+    % Display the current state of the traffic light
+    switch state
+        case red
+            disp('RED');
+            pause(3); % Red light lasts for 3 seconds
+            state = green;
+        case green
+            disp('GREEN');
+            pause(5); % Green light lasts for 5 seconds
+            state = yellow;
+        case yellow
+            disp('YELLOW');
+            pause(2); % Yellow light lasts for 2 seconds
+            state = red;
+    end
+end
